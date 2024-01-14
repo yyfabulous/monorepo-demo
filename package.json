@@ -1,25 +1,36 @@
 {
-  "name": "monorepo",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "preinstall": "npx only-allow pnpm",
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "lint": "eslint .eslintrc.cjs packages/**"
-  },
-  "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
-    "@typescript-eslint/parser": "^6.18.1",
-    "eslint": "^8.56.0",
-    "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.2.2",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.8"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21"
-  }
+    "name": "monorepo",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "preinstall": "npx only-allow pnpm",
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "lint": "eslint",
+        "prepare": "husky install"
+    },
+    "lint-staged": {
+        "packages/**/*.{js,ts}": [
+            "prettier --write",
+            "eslint --fix",
+            "git add"
+        ]
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^6.18.1",
+        "@typescript-eslint/parser": "^6.18.1",
+        "eslint": "^8.56.0",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-prettier": "^5.1.3",
+        "husky": "^8.0.3",
+        "lint-staged": "^15.2.0",
+        "prettier": "^3.2.2",
+        "typescript": "^5.3.3",
+        "vite": "^5.0.8"
+    },
+    "dependencies": {
+        "lodash": "^4.17.21"
+    }
 }

@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo -e "————————————————————正在对提交代码操作————————————————————"
+npx lint-staged

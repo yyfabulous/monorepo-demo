@@ -1,5 +1,4 @@
 module.exports = {
-    root: true,
     env: {
         browser: true,
     },
@@ -12,6 +11,7 @@ module.exports = {
     rules: {
         semi: 'error',
         indent: 'error',
+        // prettier: 'error',
     },
     // extends: {
     //     eslint: 'recommended',
