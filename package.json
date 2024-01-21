@@ -1,6 +1,6 @@
 {
     "name": "monorepo",
-    "private": true,
+    "author": "yy",
     "version": "1.0.0",
     "type": "module",
     "scripts": {
@@ -10,7 +10,8 @@
         "preview": "vite preview",
         "lint": "eslint",
         "prepare": "husky install",
-        "commit": "git-cz"
+        "commit": "git-cz",
+        "publish": "changeset version"
     },
     "lint-staged": {
         "packages/**/*.{js,ts}": [
@@ -25,6 +26,7 @@
         }
     },
     "devDependencies": {
+        "@changesets/cli": "^2.27.1",
         "@commitlint/cli": "^18.4.4",
         "@commitlint/config-conventional": "^18.4.4",
         "@typescript-eslint/eslint-plugin": "^6.18.1",
