@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo -e "————————————————————正在校验提交信息————————————————————"
+npx --no -- commitlint --edit ${1}
