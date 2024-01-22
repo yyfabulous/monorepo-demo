@@ -66,7 +66,7 @@ importers:
 
   packages/demob:
     dependencies:
-      '@monorepo/demoa':
+      '@monorepoyy/demoa':
         specifier: workspace:^
         version: link:../demoa
       vite:
